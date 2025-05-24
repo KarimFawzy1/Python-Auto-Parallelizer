@@ -1,17 +1,21 @@
-from numba import jit
+def _process_item_7(item):
+    return square(item)
 
 
-@jit(nopython=True)
+from multiprocessing import Pool
+
+
 def square(x):
     return x * x
 
 
-@jit(nopython=True)
 def main():
     data = list(range(100000))
     results = []
-    for item in data:
-        results.append(square(item))
+    with Pool() as pool:
+        results = pool.map(_process_item_7, data)
+    results_list = list(results)
+    item = results_list
     print(f'Sum of squares: {sum(results)}')
 
 

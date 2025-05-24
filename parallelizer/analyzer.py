@@ -63,6 +63,13 @@ class CodeAnalyzer:
                 if opp:
                     opportunities.append(opp)
             elif isinstance(node, ast.FunctionDef):
+                # Check for loops inside functions
+                for child in ast.walk(node):
+                    if isinstance(child, ast.For):
+                        opp = self._analyze_loop(child)
+                        if opp:
+                            opportunities.append(opp)
+                # Also check the function itself
                 opp = self._analyze_function(node)
                 if opp:
                     opportunities.append(opp)
