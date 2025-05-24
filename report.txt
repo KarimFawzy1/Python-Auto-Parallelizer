@@ -1,0 +1,30 @@
+Performance Analysis Report
+========================
+
+Original Code Performance:
+Execution Time: 0.00 seconds
+CPU Usage: 0.0%
+Memory Usage: 0.04 MB
+
+Parallelized Code Performance:
+Execution Time: 0.92 seconds
+CPU Usage: 48.2%
+Memory Usage: 36.83 MB
+
+Performance Improvements:
+Speedup: 0.00x
+CPU Utilization Change: +48.2%
+Memory Usage Change: +36.79 MB
+
+Detailed Line Profiling:
+----------------------
+
+Scalene Memory Analysis:
+----------------------
+Line 4: {'memory_usage': 113229824, 'cpu_percent': 0.0}
+Line 5: {'memory_usage': 113229824, 'cpu_percent': 0.0}
+Line 9: {'memory_usage': 113229824, 'cpu_percent': 0.0}
+Line 10: {'memory_usage': 113229824, 'cpu_percent': 0.0}
+Line 11: {'memory_usage': 113229824, 'cpu_percent': 0.0}
+Line 12: {'memory_usage': 113229824, 'cpu_percent': 0.0}
+Line 18: {'memory_usage': 113229824, 'cpu_percent': 0.0}
